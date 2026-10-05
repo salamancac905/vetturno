@@ -1,0 +1,19 @@
+package com.veterinaria.vetturno.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record MascotaRequest(
+        @NotBlank(message = "El nombre es obligatorio")
+        String nombre,
+
+        @NotBlank(message = "La especie es obligatoria")
+        String especie,
+
+        @NotBlank(message = "La raza es obligatoria")
+        String raza,
+
+        @NotNull(message = "El propietarioId es obligatorio")
+        Long propietarioId
+) {
+}
